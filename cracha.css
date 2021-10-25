@@ -1,36 +1,47 @@
 body, html{
-  height: 100%
+  height: 100%;
+  margin: 0;
 }
 
 body{
   place-items: center;
   display: grid;
+  
+  --black: hsl(240, 6%, 13%);
+  --gray: hsl(240, 9%, 89%);
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-main, body{
-  background: url(Images/background.png);
+main{
+  background: url(Images/mobile.png);
   background-size: cover;
-  background-repeat: no-repeat;
   height: 812px;
   width: 375px;
   color: white;
+  background-repeat: no-repeat;
+  color: var(--gray);
 }
 
-#FotodePerfil{
+#avatar{
   display: block;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  top: 13rem;
+  top: 11.5rem;
   height: 185px;
   width: 185px;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  object-fit: cover;
 }
 
 h1{
   font-size: 1.8rem;
 }
 
-.content, #RedesSociais{
+.container{
   place-items: center;
   display: grid;
 }
@@ -42,36 +53,43 @@ a{
   text-decoration: none;
 }
 
-#selo{
-  display: block;
-  margin-top: 50%;
-  margin-left: 30%;
-  margin-right: 50%;
+#stamp{
   position: absolute;
+  margin-top: 10.5625rem;
+  margin-left: 6.75rem;
   z-index: 1;
-
 }
 
-#NomedeUsuario{
+.userName{
+  color: var(--gray);
+  display: flex;
+  gap: 0.75rem;
+
+  color: var(--gray);
+  text-decoration: none;
+  margin-top: 0.5rem;
+
+  justify-container: center;
+  align-items: center;
   color: #c3c3cc;
 }
 
-#git{
-  margin-right: 0.5em;
-  height: 16px;
-  width: 16px;
-}
-
-h1, a, #RedesSociais, #SobreMim{
+h1, a, p{
   position: relative;
-  top: 14rem;
+  margin-top: 14rem;
 }
 
-#SobreMim{
+p{
   margin-top: 2em;
   text-align: center;
 }
 
-#RedesSociais{
-  margin-top: 4em;
+ul{
+  list-style: none;
+  padding: 0;
+  margin-top: 4rem;
+  
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
 }
